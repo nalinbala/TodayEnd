@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Martinair Flight 138</title>
+    <link rel="stylesheet" href="style.css" />
+
+    
+  </head>
+
+
+
+
+
+  <body>
+    <header>
+      
+    </header>
+
+    
+
+    <section class="intro">
+      <h3>Martinair Flight 138</h3>
+      <h1>A Tragedy in the Skies</h1>
+    </section>
+
+    <section class="vid">
+      <div class="holder">
+        <video src="vid.mp4" autoplay muted loop playsinline></video>
+      </div>
+    </section>
+
+    <section class="savvy">
+      <h3>Heading-2</h3>
+
+      <div>
+        <p>
+          Text-2
+        </p>
+       </div>
+    </section>
+
+
+    <!-- Top Section -->
+    <div class="top-section">
+      <h1>Start</h1>
+      <p>
+          Martinair Flight 138 was a charter flight of Martinair from Surabaya to Jeddah with stopover in Colombo. On 4 December 1974, the Douglas DC-8 operating the flight crashed into a mountain shortly before landing, killing all 191 people aboard – 182 passengers, all of whom were Indonesian Hajj pilgrims, and nine crew members.
+      </p>
+  </div>
+
+  
+
+  <!-- Scrollable Sections -->
+   
+  
+  <div class="scroll-section">
+    <!-- Left: Image sequence -->
+    <div class="image-container">
+      <img src="image-1.jpg" alt="Frame 1" class="sequence">
+      <img src="image-2.jpg" alt="Frame 2" class="sequence">
+      <img src="image-3.jpg" alt="Frame 3" class="sequence">
+      <!-- Add more images as needed -->
+    </div>
+  
+    <!-- Right: Text content -->
+    <div class="text-container">
+      <div class="step">
+        <h3>Step 1</h3>
+        <p>Details about Step 1...</p>
+      </div>
+      <div class="step">
+        <h3>Step 2</h3>
+        <p>Details about Step 2...</p>
+      </div>
+      <div class="step">
+        <h3>Step 3</h3>
+        <p>Details about Step 3...</p>
+      </div>
+      <div class="step">
+        <h3>Step 4</h3>
+        <p>Details about Step 4...</p>
+      </div>
+    </div>
+  </div>
+  
+
+
+
+  <!-- Bottom Section -->
+  <div class="bottom-section">
+      <h1>Location</h1>
+      <p>
+        The aircraft crashed on the fifth mountain of Saptha Kanya mountain range at Therberton estate, Maskeliya, Sri Lanka. It crashed at around 40 nautical miles from Bandaranaike International Airport, Katunayake.
+      </p>
+  </div>
+
+
+
+
+
+
+  <script>
+      const images = document.querySelectorAll('.image-container .sequence');
+const totalImages = images.length;
+
+window.addEventListener('scroll', () => {
+  // Get the scroll position as a percentage of the viewport height
+  const scrollTop = window.scrollY;
+  const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+  const scrollPercent = scrollTop / scrollHeight;
+
+  // Determine which image to show
+  const currentImageIndex = Math.min(
+    Math.floor(scrollPercent * totalImages),
+    totalImages - 1
+  );
+
+  // Update active image
+  images.forEach((img, index) => {
+    img.classList.toggle('active', index === currentImageIndex);
+  });
+});
+
+  </script>
+
+  
+
+    <script src="scrubbing.js"></script>
+  </body>
+</html>
